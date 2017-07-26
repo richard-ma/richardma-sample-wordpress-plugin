@@ -9,6 +9,11 @@
  * Lincense: MIT
  */
 
+// exit if accessed directly
+if (!define('ABSPATH')) {
+    exit;
+}
+
 function rm_add_google_analytics() {
     global $wp_admin_bar;
     $wp_admin_bar->add_menu(array(
