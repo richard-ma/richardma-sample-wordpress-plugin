@@ -10,7 +10,7 @@
  */
 
 // exit if accessed directly
-if (!define('ABSPATH')) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
