@@ -16,3 +16,4 @@ if (!defined('ABSPATH')) {
 
 // require other php file
 require_once( plugin_dir_path(__FILE__) . 'richardma-sample-wordpress-plugin-cpt.php');
+require_once( plugin_dir_path(__FILE__) . 'richardma-sample-wordpress-plugin-fields.php');
