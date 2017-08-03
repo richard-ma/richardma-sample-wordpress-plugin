@@ -58,11 +58,11 @@ function rm_register_post_type() {
             'feeds' => true
         ),
         'supports' => array(
-            'title',
-            'editor',
-            'author',
-            'custom-fields',
-            'thumbnail'
+            'title'//,
+            //'editor',
+            //'author',
+            //'custom-fields',
+            //'thumbnail'
         )
     );
 
