@@ -20,7 +20,7 @@ function rm_meta_callback($post) {
                 <label for="date-listed" class="rm-row-title">Date Listed</label>
             </div>
             <div class="meta-td">
-                <input type="text" class="rm-row-content" name="date_listed" id="date-listed" value="" />
+                <input type="text" class="rm-row-content datepicker" name="date_listed" id="date-listed" value="" />
             </div>
         </div>
     </div>
