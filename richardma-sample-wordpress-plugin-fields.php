@@ -73,16 +73,3 @@ function rm_add_custom_metabox() {
 }
 
 add_action('add_meta_boxes', 'rm_add_custom_metabox');
-
-function rm_add_submenu_page() {
-    add_submenu_page(
-        'edit.php?post_type=job',
-        'Reorder jobs',
-        'Reorder jobs',
-        'manage_options',
-        'reorder_jobs',
-        'reorder_admin_jobs_callback'
-    );
-}
-
-add_action('admin_menu', 'rm_add_submenu_page');
