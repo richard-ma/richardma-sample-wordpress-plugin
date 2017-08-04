@@ -16,12 +16,13 @@ add_action('admin_menu', 'rm_add_submenu_page');
 function reorder_admin_jobs_callback() {
 
     $args = array(
-        'post_type' => 'job',
-        'order_by' => 'menu_order',
-        'order' => 'ASC',
-        'no_found_rows' => true,
-        'update_post_term_cache' => false,
-        'post_per_page' => 50
+        //'post_type' => 'job',
+        //'order_by' => 'menu_order',
+        //'order' => 'ASC',
+        //'no_found_rows' => true,
+        //'update_post_term_cache' => false,
+        //'post_per_page' => 50
+        'category_name' => 'articles'
     );
 
     $job_listing = new WP_Query($args);
