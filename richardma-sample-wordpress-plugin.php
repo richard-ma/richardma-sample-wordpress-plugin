@@ -34,6 +34,11 @@ function rm_admin_enqueue_scripts() {
 
     if ($pagenow == 'edit.php' && $typenow == 'job') {
         wp_enqueue_script('reorder-js', plugins_url('js/reorder.js', __FILE__), array('jquery', 'jquery-ui-sortable'), 20150626, true);
+        wp_localize_script('reorder-js', 'WP_JOB_LISTING', array(
+            'security' => wp_create_nonce('wp-job-order'),
+            'success' => 'Jobs sort order has been saved.',
+            'failure' => 'There was an error while saving jobs sort order.'
+        ));
     }
 }
 

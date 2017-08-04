@@ -13,14 +13,17 @@ jQuery(document).ready(function ($) {
                 dataType: 'json',
                 data: {
                     action: 'save_post',
-                    order: sortList.sortable('toArray').toString()
+                    order: sortList.sortable('toArray').toString(),
+                    security: WP_JOB_LISTING.security
                 },
                 success: function(response) {
+                    $('div#message').remove();
                     animation.hide(); // last thing
-                    pageTitle.after('<div class="updated"><p>Jobs sort order has been saved.</p></div>');
+                    pageTitle.after('<div id="message" class="updated"><p>' + WP_JOB_LISTING.success + '</p></div>');
                 },
                 error: function(error) {
-                    pageTitle.after('<div class="error"><p>There was an error while saving jobs sort order.</p></div>');
+                    $('div#message').remove();
+                    pageTitle.after('<div id="message" class="error"><p>' + WP_JOB_LISTING.failure + '</p></div>');
                 }
             });
         }
