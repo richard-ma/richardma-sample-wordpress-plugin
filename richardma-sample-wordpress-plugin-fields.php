@@ -7,7 +7,7 @@ function rm_meta_callback($post) {
     <div>
         <div class="meta-row">
             <div class="meta-th">
-                <label for="job-id" class="rm-row-title">Job ID</label>
+                <label for="job-id" class="rm-row-title"><?php _e('Job ID', 'wp-job-listing'); ?></label>
             </div>
             <div class="meta-td">
                 <input type="text" class="rm-row-content" name="job_id" id="job-id" value="<?php if (!empty($rm_stroed_meta['job_id'])) echo esc_attr($rm_stroed_meta['job_id'][0]); ?>" />
@@ -17,7 +17,7 @@ function rm_meta_callback($post) {
     <div>
         <div class="meta-row">
             <div class="meta-th">
-                <label for="date-listed" class="rm-row-title">Date Listed</label>
+                <label for="date-listed" class="rm-row-title"><?php _e('Date Listed', 'wp-job-listing'); ?></label>
             </div>
             <div class="meta-td">
                 <input type="text" size=10 class="rm-row-content datepicker" name="date_listed" id="date-listed" value="" />
@@ -64,7 +64,7 @@ function rm_add_custom_metabox() {
 
     add_meta_box(
         'rm_meta',
-        'Job Listing',
+        _('Job Listing'),
         'rm_meta_callback', // callback function name
         'job',
         'normal',
